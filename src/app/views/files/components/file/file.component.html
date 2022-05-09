@@ -14,33 +14,34 @@
   <div class="card-body">
     <ul class="p-0 m-0">
       <li class="d-flex align-items-center justify-content-between mb-1">
-        <span> Popularity </span> <span class="fw-bold ms-3 text-end"> {{ file.popularity >= 1 ? file.popularity : 'None' }}</span>
+        <span> {{ 'File.Popularity' | translate }} </span>
+        <span class="fw-bold ms-3 text-end"> {{ file.popularity >= 1 ? file.popularity : 'None' }}</span>
       </li>
       <li class="d-flex align-items-center justify-content-between mb-1">
-        <span> Is live </span>
+        <span> {{ 'File.IsLive' | translate }} </span>
         <span class="fw-bold ms-3 text-end">
           <i *ngIf="file.live" class="fas fa-check"></i>
           <i *ngIf="!file.live" class="fas fa-times"></i>
         </span>
       </li>
       <li class="d-flex align-items-center justify-content-between mb-1">
-        <span> Created By </span>
+        <span> {{ 'File.CreatedBy' | translate }} </span>
         <span class="fw-bold ms-3 text-end" *ngIf="file.userCreatedBy; else loader">
           {{ file.userCreatedBy.givenName + ' ' + file.userCreatedBy.familyName }}</span
         >
       </li>
       <li class="d-flex align-items-center justify-content-between mb-1">
-        <span> Creation Time</span>
+        <span> {{ 'File.CreationTime' | translate }}</span>
         <span class="fw-bold ms-3 text-end"> {{ file.creationDateTime | date: 'medium':'UTC' }}</span>
       </li>
       <li class="d-flex align-items-center justify-content-between mb-1">
-        <span> Modified By </span>
+        <span> {{ 'File.ModifiedBy' | translate }} </span>
         <span class="fw-bold ms-3 text-end" *ngIf="file.userModifiedBy; else loader">
           {{ file.userModifiedBy.givenName + ' ' + file.userModifiedBy.familyName }}</span
         >
       </li>
       <li class="d-flex align-items-center justify-content-between">
-        <span> Modification Time</span>
+        <span> {{ 'File.ModificationTime' | translate }}</span>
         <span class="fw-bold ms-3 text-end"> {{ file.modifiedDateTime | date: 'medium':'UTC' }}</span>
       </li>
     </ul>
@@ -49,6 +50,6 @@
 
 <ng-template #loader
   ><div class="spinner-border text-light spinner-border-sm" role="status">
-    <span class="visually-hidden">Loading...</span>
+    <span class="visually-hidden">...</span>
   </div></ng-template
 >

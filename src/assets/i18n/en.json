@@ -14,5 +14,19 @@
     "Users_Failed": "Sorry, could not get users from server",
     "Failed": "Sorry, we could not fetch data from server for you"
   },
+  "Home": {
+    "Hello": "Hello, welcome back!",
+    "TellUs": "Tell us what do you want to see from our database...",
+    "Select": "Select one",
+    "Back": "Back to home"
+  },
+  "File": {
+    "Popularity": "Popularity",
+    "IsLive": "Is Live",
+    "CreatedBy": "Created By",
+    "CreationTime": "Creation Time",
+    "ModifiedBy": "Modified By",
+    "ModificationTime": "Modification Time"
+  },
   "Documents": " documents in total"
 }
