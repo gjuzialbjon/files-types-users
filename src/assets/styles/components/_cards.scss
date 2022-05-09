@@ -1,0 +1,14 @@
+.loading-card {
+  height: 200px;
+  min-width: 200px !important;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(110deg, #3a3a3a 8%, #302f2f 18%, #3a3a3a 33%);
+  background-size: 200% 100%;
+  animation: 1.5s shine linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}

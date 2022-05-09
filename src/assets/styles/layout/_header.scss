@@ -1,0 +1,105 @@
+@use '../abstracts' as *;
+@use '../vendors/bs' as *;
+
+.my-nav {
+  height: $headerHt;
+  background-color: var(--header__bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1099;
+  box-shadow: 0px 1px 7px rgb(54, 53, 53);
+}
+
+.my-nav-header {
+  display: inline;
+  cursor: pointer;
+}
+
+.my-nav-btn {
+  display: none;
+}
+
+.my-nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.my-nav-links > .menu-item {
+  display: inline-block;
+  padding: 11.8px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+
+  i {
+    width: 1.5rem;
+    text-align: center;
+  }
+}
+
+.my-nav-links > .menu-item:hover,
+.my-nav-links > .menu-item.active {
+  color: var(--header__menu__item__hover__clr);
+  transition: 0.2s all ease-in;
+}
+
+#my-nav-check {
+  display: none;
+}
+
+@include media-breakpoint-down(sm) {
+  .my-nav-btn {
+    display: inline-block;
+    height: $headerHt;
+  }
+
+  .my-nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    padding: 14px 14px 6px;
+    margin-bottom: 0;
+  }
+
+  .my-nav-btn > label:hover,
+  #my-nav-check:checked ~ .my-nav-btn > label {
+    background-color: rgb(104, 107, 158);
+    background-color: rgba(233, 219, 219, 0.184);
+  }
+
+  .my-nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid var(--header__mobile__toggle__clr);
+  }
+
+  .my-nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #222b45;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: $headerHt;
+    left: 0px;
+  }
+
+  .my-nav-links > .menu-item {
+    display: block;
+    width: 100%;
+  }
+
+  #my-nav-check:not(:checked) ~ .my-nav-links {
+    height: 0px;
+    transition: height 0.3s ease-in;
+  }
+
+  #my-nav-check:checked ~ .my-nav-links {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+}

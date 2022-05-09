@@ -1,0 +1,22 @@
+@use '../abstracts' as *;
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar__clr) var(--scrollbar_border__clr);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 9px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #222b45;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar__clr);
+  border-radius: 20px;
+  border: 3px solid var(--scrollbar_border__clr);
+}

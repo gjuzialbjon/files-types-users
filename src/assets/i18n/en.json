@@ -1,0 +1,18 @@
+{
+  "Menu": {
+    "Home": "Home",
+    "Files": "Files",
+    "Users": "Users",
+    "Types": "Types"
+  },
+  "Messages": {
+    "Loading_Users": "Loading users...",
+    "Loading_Files": "Loading files...",
+    "Loading_Types": "Loading types...",
+    "Files_Failed": "Sorry, could not get files from server",
+    "Types_Failed": "Sorry, could not get types from server",
+    "Users_Failed": "Sorry, could not get users from server",
+    "Failed": "Sorry, we could not fetch data from server for you"
+  },
+  "Documents": " documents in total"
+}

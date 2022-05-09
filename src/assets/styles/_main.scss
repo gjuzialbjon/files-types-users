@@ -1,0 +1,6 @@
+@use './overrides/bs-override' as *;
+@use './components';
+@use './layout';
+
+// Now we can use bootstrap
+@import '~bootstrap/scss/bootstrap';

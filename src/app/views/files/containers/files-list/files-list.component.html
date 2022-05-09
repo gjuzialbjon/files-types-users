@@ -1,0 +1,15 @@
+<div class="mb-5" *ngFor="let fileGroup of groupedFiles | keyvalue">
+  <h3 class="text-center mb-3">{{ getFileGroupTypeName(fileGroup.key) }}</h3>
+  <hr />
+  <div class="row">
+    <div class="col-sm-6" *ngFor="let file of fileGroup.value; trackBy: trackBy">
+      <app-file [file]="file"></app-file>
+    </div>
+  </div>
+</div>
+
+<app-skeleton-cards
+  *ngIf="(filesState$ | async)?.loading"
+  [message]="'Messages.Loading_Files' | translate"
+  [cardHeight]="250"></app-skeleton-cards>
+<app-failed *ngIf="(filesState$ | async)?.failed" [message]="'Messages.Files_Failed'"></app-failed>

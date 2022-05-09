@@ -1,0 +1,12 @@
+<div *ngIf="(typesState$ | async)?.types?.length" class="mb-5">
+  <h3 class="text-center mb-3">{{ 'Menu.Types' | translate }}</h3>
+  <hr />
+  <div class="row">
+    <div class="col-md-6" *ngFor="let type of (typesState$ | async)?.types; trackBy: trackBy">
+      <app-type [type]="type"></app-type>
+    </div>
+  </div>
+</div>
+
+<app-skeleton-cards *ngIf="(typesState$ | async)?.loading" [message]="'Messages.Loading_Types' | translate"></app-skeleton-cards>
+<app-failed *ngIf="(typesState$ | async)?.failed" [message]="'Messages.Types_Failed'"></app-failed>

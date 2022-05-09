@@ -1,0 +1,12 @@
+<div *ngIf="(usersState$ | async)?.users?.length" class="mb-5">
+  <h3 class="text-center mb-3">{{ 'Menu.Users' | translate }}</h3>
+  <hr />
+  <div class="row">
+    <div class="col-md-6" *ngFor="let user of (usersState$ | async)?.users; trackBy: trackBy">
+      <app-user [user]="user"></app-user>
+    </div>
+  </div>
+</div>
+
+<app-skeleton-cards *ngIf="(usersState$ | async)?.loading" [message]="'Messages.Loading_Users'" [cardHeight]="50"></app-skeleton-cards>
+<app-failed *ngIf="(usersState$ | async)?.failed" [message]="'Messages.Users_Failed'"></app-failed>

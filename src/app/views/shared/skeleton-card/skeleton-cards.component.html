@@ -1,0 +1,7 @@
+<p *ngIf="message" class="text-center">{{ message | translate }}</p>
+
+<div class="row">
+  <div class="col-sm-6" *ngFor="let nr of nrOfCards">
+    <div class="card mb-3 shadow loading-card" [ngStyle]="{ height: cardHeight + 'px' }"></div>
+  </div>
+</div>

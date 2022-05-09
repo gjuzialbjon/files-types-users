@@ -1,0 +1,10 @@
+@use '../abstracts' as *;
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.main-content {
+  padding-top: $headerHt;
+}

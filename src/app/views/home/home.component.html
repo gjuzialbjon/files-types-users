@@ -1,0 +1,20 @@
+<div class="jumbotron">
+  <h3 class="display-4">Hello, welcome back!</h3>
+  <p class="lead">Tell us what do you want to see from our database...</p>
+  <hr class="my-4" />
+  <p>Select one.</p>
+  <p class="lead d-flex flex-column flex-sm-row">
+    <button class="btn btn-primary btn-lg me-3 mb-3 mb-sm-0" routerLink="../files" title="{{ 'Menu.Files' | translate }}">
+      <i class="fas fa-file-alt"></i>
+      {{ 'Menu.Files' | translate }}
+    </button>
+    <button class="btn btn-primary btn-lg me-3 mb-3 mb-sm-0" routerLink="../users" title="{{ 'Menu.Users' | translate }}">
+      <i class="fas fa-users"></i>
+      {{ 'Menu.Users' | translate }}
+    </button>
+    <button class="btn btn-primary btn-lg me-3" routerLink="../types" title="{{ 'Menu.Types' | translate }}">
+      <i class="fas fa-tasks"></i>
+      {{ 'Menu.Types' | translate }}
+    </button>
+  </p>
+</div>
