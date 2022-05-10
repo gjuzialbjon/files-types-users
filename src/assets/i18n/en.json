@@ -28,5 +28,7 @@
     "ModifiedBy": "Modified By",
     "ModificationTime": "Modification Time"
   },
-  "Documents": " documents in total"
+  "Documents": " documents in total",
+  "Search": "Search for files",
+  "NoFilesMatch": "No files match your key, try typing something else"
 }

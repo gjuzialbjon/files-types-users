@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { HomeComponent } from './views/home/home.component';
 import { ResponseInterceptor } from './core/interceptors/response.interceptor';
+import { SearchComponent } from './layout/search/search.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -43,7 +44,7 @@ const ROUTES: Route[] = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, SearchComponent],
   imports: [
     BrowserModule,
     FormsModule,

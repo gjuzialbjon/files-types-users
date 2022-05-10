@@ -1,4 +1,4 @@
-<div class="mb-5" *ngFor="let fileGroup of groupedFiles | keyvalue">
+<div class="mb-5" *ngFor="let fileGroup of groupedFilteredFiles | keyvalue">
   <h3 class="text-center mb-3">{{ getFileGroupTypeName(fileGroup.key) }}</h3>
   <hr />
   <div class="row">
@@ -7,6 +7,8 @@
     </div>
   </div>
 </div>
+
+<p *ngIf="emptyMessage">{{ emptyMessage | translate }}</p>
 
 <app-skeleton-cards
   *ngIf="(filesState$ | async)?.loading"
