@@ -69,7 +69,6 @@ export class FilesListComponent implements OnInit {
 
       this.groupedFiles = groupBy(this.files, (file) => file.type);
       this.filterByName();
-      this.chRef.markForCheck();
     });
   }
 
@@ -99,8 +98,6 @@ export class FilesListComponent implements OnInit {
         break;
       }
     }
-
-    console.log(this.searchParam, foundOne);
 
     if (!foundOne && this.searchParam.length > 0) {
       this.emptyMessage = 'NoFilesMatch';
